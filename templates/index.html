@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>パーソナルカラー診断サイト</title>
+</head>
+{% block content %}
+<style>
+    body {
+        background-color: #f8f9fa; /* ライトグレーの背景色 */
+        color: #343a40; /* ダークグレーのテキストカラー */
+        font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+            /* 他のスタイル */
+            background: linear-gradient(45deg, #e74c3c, #3498db, #2ecc71, #3b6186);
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block; /* インラインブロック要素にすることで文字ごとにスタイルが適用されます */
+        }
+
+    form {
+        margin-top: 20px;
+    }
+
+    input[type="file"] {
+        border: 2px solid #007bff; /* ブルーのボーダーカラー */
+        padding: 10px;
+        border-radius: 5px;
+        color: #007bff; /* ブルーのテキストカラー */
+        background-color: #fff; /* 白の背景色 */
+    }
+
+    input[type="submit"] {
+        background-color: #007bff; /* ブルーのボタンカラー */
+        color: #fff; /* 白のテキストカラー */
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        /* 他のスタイルを追加 */
+    }
+
+    input[type="submit"]:hover {
+        background-color: #4fb9ff; /* 濃いブルーのホバー時のボタンカラー */
+    }
+
+    div {
+        background-color: #fffffb; /* 白の背景色 */
+        border-radius: 10px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.1); /* 軽い影の効果 */
+        padding: 20px;
+        margin: 100px ;
+        max-width: 900px;
+        }
+     h4 {
+        margin-top: 80px;
+        background: linear-gradient(45deg, #e74c3c, #3498db, #2ecc71, #3b6186);
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block; 
+    }
+
+
+
+
+
+</style>
+
+
+<center>
+<div>
+    <h1>あなたの顔でパーソナルカラー診断
+    </h1>
+<img src="static\images\1559550928.png"style="margin: 20px; vertical-align: bottom; width: 200px;">
+<p>このサイトはあなたの顔写真を元に<br>パーソナルカラーを診断するサイトです。</p>
+<h4 style="text-align: left;">パーソナルカラーとは？</h4>
+<p>パーソナルカラーとは、 自分をより良く見せ、引き立ててくれる色 のことです。<br>その人が生まれ持った髪・瞳・肌・頬・唇の色などをもとに、<br>より自分を引き立たせる色のグループ を見つけます</p>
+
+<h5 style="color: #e74c3c;text-align: left;">イエベ春</h5>
+<p>春タイプは、「ブライトスプリング」とも呼ばれ、全体的に明るく、可愛らしい印象の人です。<br>花では、ポピーやチューリップのような色合いを指します。
+</p>
+<h5 style="color: #3498db;text-align: left;">ブルべ夏</h5>
+<p>夏タイプは、「パステルサマー」とも呼ばれ、全体的に上品でソフトな印象の人です。<br>花では紫陽花（あじさい）や朝顔のような色合いを指します。
+</p>
+<h5 style="color: #2ecc71;text-align: left;">イエベ秋</h5>
+<p>秋タイプは、「ディープオータム」とも呼ばれ、全体的に落ち着いた深みのある印象の人です。<br>熟した果実や紅葉のような色合いを指します。</p>
+<h5 style="color: #3b6186;text-align: left;">ブルべ冬</h5>
+<p>冬タイプは、「ビビットウィンター」とも呼ばれ、個性的でパキッとした印象の人です。<br>バイオレットやレモンイエローのような鮮やかな色合いを指します。</p>
+<h4>診断はここから↓</h4>
+<p>正面を向いた顔写真をアップロードしてください（png,jpg, jpeg）</p>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <input type="submit" value="送信する">
+</center>
+</form>
+</div>{% endblock %}
+
+</html> 
+
